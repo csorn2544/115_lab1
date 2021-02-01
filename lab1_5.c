@@ -1,23 +1,16 @@
 #include <stdio.h>
 int main()
 {
-    int n,m,M;
+    int n,N,i,M=0,position;
     scanf("%d",&n);
-    int N[n];
-    for (int i=0; i<n; i++)
+    for(i=1; i<=n; i++)
     {
-        scanf("%d",&N[i]);
-    }
-    for(int i=0; i<n; i++)
-    {
-        if(M<N[i])
+        scanf("%d",&N);
+        if(M<N)
         {
-            M = N[i];
-        }
-        if(N[i] < m)
-        {
-            m = N[i];
+            M = N;
+            position = i;
         }
     }
-    printf("%d %d",m,M);
+    printf("%d %d",position,M);
 }
